@@ -12,9 +12,11 @@
     "lucide-react": "^0.287.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.47.0"
   },
   "devDependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@rocketseat/eslint-config": "^2.1.0",
     "@tanstack/react-query": "^4.36.1",
     "@types/node": "^20",
@@ -27,6 +29,7 @@
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zod": "^3.22.4"
   }
 }

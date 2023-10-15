@@ -28,6 +28,7 @@ export default function RootLayout({
       <body 
         className={`${roboto.variable} ${baiJamjuree}`}
       >
+        
         <DefaultProvider>
           {children}  
         </DefaultProvider>
