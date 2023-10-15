@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 
 const validationScrema = z.object({
   name: z
-    .string().min(5, "tem que ter 5 caracteres"),
+    .string().min(5, "tem que ter 5 caracteres para continuar"),
   senha: z
     .string().min(8, "O Campo tem que conter no minimo 8 caracteres")
         
