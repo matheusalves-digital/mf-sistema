@@ -1,4 +1,5 @@
 'use client'
+import { Nav } from "@/components/nav";
 import { useUsersResponse } from "@/hooks/useUserQuery"
 import { useData } from "@/interfaces/use-data";
 import axios from "axios";
@@ -23,13 +24,15 @@ export default function UsersResponse() {
   }, [])
 
   return (
-    <div className="p-10">
+    <div className="bg-gray-900 min-h-screen flex">
+      <Nav />
+      <div className="bg-gray-50 rounded-lg flex-grow mt-6 mr-6 mb-6">
         {data?.map(data => (
-          <div className="flex flex-col w-60 rounded-lg border p-5" key={data.id}>
+          <div key={data.id}>
             <h1>{data.name}</h1>
-            <p>{data.senha}</p>
           </div>
         ))}
+      </div>
     </div>
 
   )

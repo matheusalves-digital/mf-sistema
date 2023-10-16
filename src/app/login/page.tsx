@@ -9,6 +9,8 @@ import { User, LockKeyhole } from "lucide-react";
 import { useUsersData } from "@/hooks/useUsersData";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { GetServerSideProps } from "next";
+import Link from "next/link";
 
 const validationScrema = z.object({
   name: z
@@ -91,6 +93,13 @@ export function Login() {
       <button type="submit" className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg" onClick={submit}>
         Entrar
       </button>
+      <Link
+        href="#"
+        className="text-gray-300 text-sm p-2"
+      >
+        Não tem uma conta? <span className="text-blue-50 pl-2"> Registre-se</span>
+      </Link>
     </div> 
   )
+
 }
