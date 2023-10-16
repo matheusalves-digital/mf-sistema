@@ -22,7 +22,7 @@ export function Nav() {
   
 
   return (
-    <aside className='p-6 text-gray-400'>
+    <aside className='p-6 text-gray-400 '>
       <div className="flex justify-center">
         <Image src={logo} alt='logos' />
       </div>
@@ -36,45 +36,45 @@ export function Nav() {
         />
       </div>
       <nav className=''>
-        <p className='text-sm'>Menu</p>
-        <Link href={'/'} className='flex'>
+        <p className='text-sm mb-4'>Menu</p>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <Home size={25}/>
           Inicial
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <LayoutDashboard size={25}/>
           Dashboard
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <Filter size={25}/>
           Triagem
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <ClipboardSignature size={25}/>
           Cadastro
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <ListChecks size={25}/>
           Cumprimento
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <BadgeCheck size={25}/>
           Qualidade
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <LayoutDashboard size={25}/>
           Pagamento
         </Link>
-        <p className='text-sm'>Configuração e ajuda</p>
-        <Link href={'/'} className='flex'>
+        <p className='text-sm mb-4'>Configuração e ajuda</p>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <HelpCircle size={25}/>
           Ajuda
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <Settings size={25}/>
           Configuração
         </Link>
-        <Link href={'/'} className='flex'>
+        <Link href={'/'} className='flex gap-2 mb-4'>
           <LogOut size={25}/>
           Sair
         </Link>
