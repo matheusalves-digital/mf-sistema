@@ -7,10 +7,11 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string
 }
 
-export function PrimaryInputSearchIcon({label, value, updateValue, placeholder}: InputProps) {
+export function PrimaryInputSearchIcon({type, value, updateValue, placeholder}: InputProps) {
   return (
     <div>
       <input 
+        type={type}
         className="w-full p-2 bg-transparent outline-none text-gray-300"
         value={value}
         placeholder={placeholder}

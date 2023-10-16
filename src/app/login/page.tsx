@@ -64,7 +64,7 @@ export function Login() {
   })
 
   return (
-    <div className="flex w-80 h-96 bg-gray-900 p-10 flex-col rounded-lg border">
+    <div className="flex w-80 h-96 bg-gray-900 p-10 flex-col rounded-lg">
       <div className="flex justify-center">
         <Image src={logo} alt='logo'/>
       </div>
@@ -82,6 +82,7 @@ export function Login() {
       <div className="flex bg-gray-50 items-center rounded-lg border">
         <LockKeyhole className="pl-2" size={25}/>
         <PrimaryInputSearchIcon
+          type="password"
           value={senha}
           updateValue={setSenha}
           placeholder="Senha"
@@ -93,12 +94,6 @@ export function Login() {
       <button type="submit" className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg" onClick={submit}>
         Entrar
       </button>
-      <Link
-        href="#"
-        className="text-gray-300 text-sm p-2"
-      >
-        Não tem uma conta? <span className="text-blue-50 pl-2"> Registre-se</span>
-      </Link>
     </div> 
   )
 
