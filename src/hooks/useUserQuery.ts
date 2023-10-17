@@ -2,10 +2,10 @@ import { useResponse } from "@/interfaces/use-data";
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosPromise } from "axios";
 
-const API_URL = "https://localhost:7065"
+const API_URL = "http://localhost:8080"
 
 const fetchData = (): AxiosPromise<useResponse> => {
-  const response = axios.get<useResponse>(API_URL + "/api/User");
+  const response = axios.get<useResponse>(API_URL + "/api/users");
   return response;
 }
 

@@ -4,7 +4,7 @@ import { useData } from "@/interfaces/use-data";
 import axios from "axios";
 import { useEffect, useState } from "react";
   
-const API_URL = "https://localhost:7065";
+const API_URL = "http://localhost:8080";
 
 
 export default function UsersResponse() {
