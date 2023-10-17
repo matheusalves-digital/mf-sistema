@@ -12,7 +12,7 @@ export function PrimaryInputSearchIcon({type, value, updateValue, placeholder}: 
     <div>
       <input 
         type={type}
-        className="w-full p-2 bg-transparent outline-none text-gray-300"
+        className="w-full p-2 outline-none placeholder-gray-100 font-sans font-semibold rounded-lg"
         value={value}
         placeholder={placeholder}
         onChange={event => updateValue(event.target.value)}

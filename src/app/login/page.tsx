@@ -9,8 +9,7 @@ import { User, LockKeyhole } from "lucide-react";
 import { useUsersData } from "@/hooks/useUsersData";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { GetServerSideProps } from "next";
-import Link from "next/link";
+import { Logo } from "@/components/icons/logo-login";
 
 const validationScrema = z.object({
   name: z
@@ -66,20 +65,21 @@ export function Login() {
   return (
     <div className="flex w-80 h-96 bg-gray-900 p-10 flex-col rounded-lg">
       <div className="flex justify-center">
-        <Image src={logo} alt='logo'/>
+        <Logo />
       </div>
-      <div className="flex mb-2 bg-gray-50 items-center rounded-lg border mt-4">
+      <div className="flex mb-2 bg-gray-150 items-center rounded-lg border mt-4">
         <User className="pl-2" size={25}/>
         <PrimaryInputSearchIcon
+          type="text"
           value={name}
           updateValue={setName}
-          placeholder="Usuario"
+          placeholder="Usuário"
           {...register('name')}
         />
       </div>
       {errors.name && <span className="mb-2 text-sm text-blue-50">{errors?.name?.message}</span>}
 
-      <div className="flex bg-gray-50 items-center rounded-lg border">
+      <div className="flex bg-gray-150 items-center rounded-lg border">
         <LockKeyhole className="pl-2" size={25}/>
         <PrimaryInputSearchIcon
           type="password"
@@ -91,7 +91,7 @@ export function Login() {
       </div>
       <span className="text-sm text-blue-50 mb-2">{errors?.senha?.message}</span>
 
-      <button type="submit" className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg" onClick={submit}>
+      <button type="submit" className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg font-sans font-semibold" onClick={submit}>
         Entrar
       </button>
     </div> 

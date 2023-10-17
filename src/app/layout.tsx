@@ -1,19 +1,20 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { 
-  Roboto_Flex as Roboto,
+  Inter,
   Bai_Jamjuree as BaiJamjuree,
  } from 'next/font/google'
 import { DefaultProvider } from '@/components/default-provider'
-import { SessionProvider } from 'next-auth/react'
-import { AppProps } from 'next/app'
 import { Session } from 'next-auth'
 
- const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+ const inter = Inter({ 
+    subsets: ['latin'],
+    weight: '300',
+    variable: '--font-inter' })
  const baiJamjuree = BaiJamjuree({
-   subsets: ['latin'],
-   weight: '700',
-   variable: '--font-bai-jam-juree',
+    subsets: ['latin'],
+    weight: '700',
+    variable: '--font-bai-jam-juree',
  })
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function RootLayout({children, session}: propsApp) {
   return (
     <html lang="en">
       <body 
-        className={`${roboto.variable} ${baiJamjuree}`}
+        className={`${inter.variable} ${baiJamjuree}`}
       >
         
           <DefaultProvider>

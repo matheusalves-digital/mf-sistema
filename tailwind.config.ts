@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-roboto)',
+        sans: 'var(--font-inter)',
         alt: 'var(--font-bai-jam-juree)',
       },
 
@@ -17,6 +17,7 @@ const config: Config = {
         gray: {
           50: '#eaeaea',
           100: '#bebebf',
+          150: '#fff',
           200: '#9e9ea0',
           300: '#727275',
           400: '#56565a',
@@ -30,6 +31,7 @@ const config: Config = {
           50: '#f3eefc',
           100: '#d8cbf7',
           200: '#c6b2f3',
+          250: '#6D72FF',
           300: '#ab8eee',
           400: '#9b79ea',
           500: '#8257e5',

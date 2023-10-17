@@ -1,9 +1,9 @@
 import LayoutComponent from "@/components/layout-component";
 
-export default function Dashboard() {
+export default function Pagamento() {
   return (
     <LayoutComponent>
-      <p>CUMPRIMENTO</p>
+      <p>QUALIDADE</p>
     </LayoutComponent>
   )
 }
