@@ -11,7 +11,7 @@ export default function LayoutComponent({children}: PropsLayout) {
     <div className="bg-gray-900 min-h-screen flex">
       <Nav />
       <div className="bg-gray-50 rounded-lg flex-grow mt-6 mr-6 mb-6">
-        {children}
+          {children}
       </div>
     </div>
 

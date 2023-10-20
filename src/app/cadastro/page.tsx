@@ -3,7 +3,7 @@ import LayoutComponent from "@/components/layout-component";
 export default function Cadastro() {
   return (
     <LayoutComponent>
-      <p>CADASTRO</p>
+      <p className="text-x1">Cadastro</p>
     </LayoutComponent>
   )
 }

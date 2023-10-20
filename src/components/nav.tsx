@@ -82,7 +82,7 @@ export function Nav() {
           <Settings size={22} className="ml-2"/>
           Configuração
         </Link>
-        <Link href={'/sair'} className={inactiveLink}>
+        <Link href={'/'} className={inactiveLink}>
           <LogOut size={22} className="ml-2"/>
           Sair
         </Link>

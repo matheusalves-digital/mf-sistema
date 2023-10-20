@@ -9,7 +9,7 @@ import { Logo } from "@/components/icons/logo-login";
 export function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const { mutate, isSuccess } = useUsersData();
+  const [error, setError] = useState("");
   const router = useRouter();
 
   const handleNavigate = () => {
@@ -34,13 +34,12 @@ export function Login() {
       if (response.ok) {
         const responseData = await response.json();
 
-        // Armazena o token (exemplo usando localStorage)
         localStorage.setItem("token", responseData.token);
 
-        // Redireciona para a página de usuários
-        router.push("/users");
+        router.push("/inicio");
       } else {
-        console.error("Falha na autenticação");
+        setError("Falha na autenticação");
+        // console.error("Falha na autenticação");
       }
     } catch (error) {
       console.error("Erro durante a autenticação", error);
@@ -48,7 +47,7 @@ export function Login() {
   };
 
   return (
-    <div className="flex w-80 h-96 bg-gray-900 p-10 flex-col rounded-lg">
+    <div className="flex w-90 h-86 bg-gray-900 p-10 flex-col rounded-lg">
       <div className="flex justify-center">
         <Logo />
       </div>
@@ -72,13 +71,29 @@ export function Login() {
         />
       </div>
 
+      {error && (
+        <div className="text-red-500 mt-2">
+          <span>{error}</span>
+        </div>
+      )}
+
       <button
         type="button"
-        className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg font-sans font-semibold"
+        className="h-10 rounded-lg bg-blue-50 text-gray-50 text-lg font-sans font-semibold mt-3"
         onClick={submit}
       >
         Entrar
       </button>
+
+      <div className="flex mt-2">
+        <a
+          href="#"
+          style={{ fontSize: '12px', color: '#0077cc', cursor: 'pointer' }}
+          // onClick={requestNewPasswod}
+        >
+          Solicitar nova senha
+        </a>
+      </div>
     </div>
   );
 }
